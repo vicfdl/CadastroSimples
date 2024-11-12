@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro de Cliente</h1>
+
+    <form th:action="@{/cadastro}" method="post" th:object="${cliente}">
+        Nome: <input type="text" name="nome" th:field="*{nome}"><br>
+        E-mail: <input type="email" name="email" th:field="*{email}"><br>
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <a th:href="@{/}">Voltar para index</a>
+</body>
+</html>
